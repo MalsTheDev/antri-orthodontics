@@ -43,7 +43,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="flex flex-col py-24 section-pattern">
+    <div className="flex flex-col py-12 section-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-20">
           <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6">Υπηρεσίες & <span className="text-blue-500">Θεραπείες</span></h1>

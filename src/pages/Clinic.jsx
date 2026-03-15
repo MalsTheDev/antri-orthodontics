@@ -11,21 +11,21 @@ const Clinic = () => {
   return (
     <div className="flex flex-col section-pattern">
       {/* Doctor Section */}
-      <section className="pt-20 pb-24 bg-white">
+      <section className="pt-12 md:pt-24 pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-blue-50 h-125">
                 <img
-                  src="/xwros/1.jpg"
+                  src="/xwros/4.jpg"
                   alt="Clinic interior"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-blue-600 text-white p-8 rounded-2xl shadow-xl max-w-70">
+              <div className="absolute -bottom-6 -right-2 md:-right-6 bg-blue-600 text-white p-4 md:p-8 rounded-2xl shadow-xl max-w-70">
                 <div className="text-sm font-bold uppercase tracking-widest mb-1">Δρ. ΚΟΝΤΟΠΟΥΛΟΥ</div>
                 <div className="text-2xl font-black">ΑΝΤΡΗ</div>
-                <div className="mt-4 pt-4 border-t border-blue-500/30 text-xs font-medium opacity-80">
+                <div className="mt-2 pt-2 md:mt-4 md:pt-4 border-t border-blue-500/30 text-xs font-medium opacity-80">
                   Ειδική Ορθοδοντικός (MS)
                 </div>
               </div>
@@ -70,7 +70,7 @@ const Clinic = () => {
       </section>
 
       {/* Clinic Gallery */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 md:py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-extrabold text-blue-900 mb-4">Ο Χώρος μας</h2>
@@ -79,7 +79,7 @@ const Clinic = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {images.map((img, idx) => (
               <button
                 key={idx}

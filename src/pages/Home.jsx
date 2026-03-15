@@ -11,7 +11,7 @@ const Home = () => {
               <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100">
                 <span className="text-xs font-bold text-blue-600 uppercase tracking-widest">Εξειδικευμένη Ορθοδοντική</span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-extrabold text-blue-900 tracking-tight leading-none">
+              <h1 className="text-4xl md:text-6xl font-extrabold text-blue-900 tracking-tight leading-none">
                 Το χαμόγελό σας, η <span className="text-blue-500">προτεραιότητά μας.</span>
               </h1>
               <p className="text-lg text-gray-600 leading-relaxed max-w-2xl">

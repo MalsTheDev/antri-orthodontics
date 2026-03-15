@@ -25,13 +25,13 @@ const CaseCard = ({ item }) => {
           </div>
         </div>
       </div>
-      
+
       <div className="p-8 bg-white border-t border-blue-50">
         <h3 className="text-xl font-bold text-blue-900 leading-tight">{item.title}</h3>
         <p className="text-[11px] font-black uppercase tracking-widest text-blue-400 mt-1">{item.category}</p>
         <div className="mt-4 flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-green-500"></div>
-            <span className="text-[11px] font-bold text-gray-400 uppercase tracking-tighter">Ολοκληρωμένη Θεραπεία</span>
+          <div className="w-2 h-2 rounded-full bg-green-500"></div>
+          <span className="text-[11px] font-bold text-gray-400 uppercase tracking-tighter">Ολοκληρωμένη Θεραπεία</span>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@ const Results = () => {
   ];
 
   return (
-    <div className="flex flex-col py-24 bg-white section-pattern">
+    <div className="flex flex-col py-12 md:py-24 bg-white section-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 space-y-4">
           <h1 className="text-4xl md:text-5xl font-black text-blue-900 tracking-tight">
@@ -104,10 +104,10 @@ const Results = () => {
 
         {/* Disclaimer */}
         <div className="mt-20 p-10 rounded-3xl border-2 border-dashed border-blue-100 bg-blue-50/30 text-center">
-            <p className="text-sm text-blue-800 leading-relaxed font-semibold max-w-2xl mx-auto">
-                * Σημείωση: Τα αποτελέσματα είναι ενδεικτικά και διαφέρουν ανάλογα με την ανατομία και τις ανάγκες κάθε ασθενούς. 
-                Επισκεφθείτε μας για μια δωρεάν πρώτη εκτίμηση.
-            </p>
+          <p className="text-sm text-blue-800 leading-relaxed font-semibold max-w-2xl mx-auto">
+            * Σημείωση: Τα αποτελέσματα είναι ενδεικτικά και διαφέρουν ανάλογα με την ανατομία και τις ανάγκες κάθε ασθενούς.
+            Επισκεφθείτε μας για μια δωρεάν πρώτη εκτίμηση.
+          </p>
         </div>
       </div>
     </div>

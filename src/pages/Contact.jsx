@@ -20,7 +20,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col py-24 bg-white section-pattern">
+    <div className="flex flex-col py-12 md:py-24 bg-white section-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
           <h1 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">Επικοινωνήστε <span className="text-blue-500">μαζί μας</span></h1>
