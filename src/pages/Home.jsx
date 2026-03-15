@@ -35,7 +35,7 @@ const Home = () => {
             <div className="mt-16 lg:mt-0 lg:col-span-6 relative animate-fade-in-up">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-blue-50 transform hover:scale-[1.02] transition-transform duration-500">
                 <img
-                  src="/xwros/1.jpg"
+                  src="/xwros/4.jpg"
                   alt="Modern Orthodontic Clinic"
                   className="w-full h-125 object-cover"
                 />
