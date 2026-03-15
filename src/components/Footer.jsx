@@ -72,7 +72,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-gray-400 text-xs">
-            © {new Date().getFullYear()} Ανθή Α. Κοντροπούλου. Mε επιφύλαξη παντός δικαιώματος.
+            © {new Date().getFullYear()} Αντρή Α. Κοντοπούλου. Mε επιφύλαξη παντός δικαιώματος.
           </p>
         </div>
       </div>
