@@ -41,7 +41,16 @@ const Contact = () => {
                   <h3 className="font-bold text-blue-900 uppercase text-sm tracking-widest">Λαμία</h3>
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Καποδιστρίου 16<br />Τηλ: <a href="tel:2231051127" className="font-bold hover:text-blue-600">22310 51127</a>
+                  <a 
+                    href="https://maps.app.goo.gl/F1nQcjBEJ2NLM6uU7" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-600"
+                  >
+                    Καποδιστρίου 16
+                  </a><br />
+                  Τηλ: <a href="tel:2231051127" className="font-bold hover:text-blue-600">22310 51127</a><br />
+                  Κιν: <a href="tel:6936818168" className="font-bold hover:text-blue-600">693 681 8168</a>
                 </p>
               </div>
 

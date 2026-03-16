@@ -17,7 +17,7 @@ const Clinic = () => {
             <div className="lg:w-1/2 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-1 ring-blue-50 h-125">
                 <img
-                  src="/xwros/4.jpg"
+                  src="/doctor.jpg"
                   alt="Clinic interior"
                   className="w-full h-full object-cover"
                 />

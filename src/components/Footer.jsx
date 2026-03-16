@@ -21,11 +21,21 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start text-gray-600 text-sm">
                 <MapPin className="w-4 h-4 mr-2 text-blue-500 shrink-0 mt-0.5" />
-                <span>Καποδιστρίου 16, Λαμία</span>
+                <a 
+                  href="https://maps.app.goo.gl/F1nQcjBEJ2NLM6uU7" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600"
+                >
+                  Καποδιστρίου 16, Λαμία
+                </a>
               </li>
               <li className="flex items-center text-gray-600 text-sm">
                 <Phone className="w-4 h-4 mr-2 text-blue-500" />
-                <a href="tel:2231051127" className="hover:text-blue-600">22310 51127</a>
+                <div className="flex flex-col">
+                  <a href="tel:2231051127" className="hover:text-blue-600">22310 51127</a>
+                  <a href="tel:6936818168" className="hover:text-blue-600">693 681 8168</a>
+                </div>
               </li>
             </ul>
           </div>
@@ -72,7 +82,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="text-gray-400 text-xs">
-            © {new Date().getFullYear()} Αντρή Α. Κοντοπούλου. Mε επιφύλαξη παντός δικαιώματος.
+            © {new Date().getFullYear()} Άντρη Α. Κοντοπούλου. Mε επιφύλαξη παντός δικαιώματος.
           </p>
         </div>
       </div>

@@ -102,13 +102,12 @@ const Results = () => {
           ))}
         </div>
 
-        {/* Disclaimer */}
-        <div className="mt-20 p-10 rounded-3xl border-2 border-dashed border-blue-100 bg-blue-50/30 text-center">
+        {/* <div className="mt-20 p-10 rounded-3xl border-2 border-dashed border-blue-100 bg-blue-50/30 text-center">
           <p className="text-sm text-blue-800 leading-relaxed font-semibold max-w-2xl mx-auto">
             * Σημείωση: Τα αποτελέσματα είναι ενδεικτικά και διαφέρουν ανάλογα με την ανατομία και τις ανάγκες κάθε ασθενούς.
             Επισκεφθείτε μας για μια δωρεάν πρώτη εκτίμηση.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
