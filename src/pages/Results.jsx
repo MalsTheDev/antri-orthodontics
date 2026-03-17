@@ -56,7 +56,7 @@ const Results = () => {
     },
     {
       id: 3,
-      title: 'Κλείσιμο Διαστημάτων',
+      title: 'Κλείσιμο διαστημάτων μετά από εξαγωγές μονίμων δοντιών',
       category: 'Αισθητική Ορθοδοντική',
       before: '/before-after/3before.jpg',
       after: '/before-after/3after.jpg'

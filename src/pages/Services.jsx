@@ -1,9 +1,17 @@
 // No icons used for a cleaner, more professional feel
 
 import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const serviceList = [
+    {
+      id: 'digital-impression',
+      title: 'Ψηφιακή Αποτύπωση',
+      description: 'Ψηφιακή αποτύπωση στόματος με 3D scanner για μελέτη, ψηφιακά εκμαγεία και σχεδιασμό μετακίνησης δοντιών.',
+      tags: ['3D Scanner', 'Τεχνολογία'],
+      video: '/3d.webm'
+    },
     {
       id: 'pediatric',
       title: 'Ορθοδοντική Παιδιών',
@@ -54,9 +62,24 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {serviceList.map((service) => (
-            <div key={service.id} className="group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-blue-50 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300">
+            <div key={service.id} className={`group relative p-8 rounded-3xl bg-white/80 backdrop-blur-sm border border-blue-50 shadow-sm hover:shadow-xl hover:border-blue-200 transition-all duration-300 ${service.video ? 'lg:col-span-2 flex flex-col md:flex-row gap-8 items-center' : ''}`}>
               <div className="absolute inset-0 bg-linear-to-br from-white/70 via-white/40 to-transparent pointer-events-none" />
-              <div className="relative z-10">
+
+              {service.video && (
+                <div className="relative w-full md:w-1/2 aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-blue-100 bg-slate-100 order-1 md:order-2">
+                  <video
+                    src={service.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-blue-900/20 to-transparent pointer-events-none" />
+                </div>
+              )}
+
+              <div className={`relative z-10 ${service.video ? 'w-full md:w-1/2 order-2 md:order-1' : ''}`}>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {service.tags.map(tag => (
                     <span key={tag} className="text-[10px] font-black uppercase tracking-widest px-2 py-1 bg-slate-100 text-slate-500 rounded-md">
@@ -70,10 +93,6 @@ const Services = () => {
                   {service.description}
                 </p>
 
-                <div className="pt-6 border-t border-slate-50 flex items-center text-blue-600 font-bold text-sm cursor-pointer hover:gap-2 transition-all">
-                  <span>Μάθετε περισσότερα</span>
-                  <ChevronRight className="ml-1 w-4 h-4" />
-                </div>
               </div>
             </div>
           ))}
@@ -86,9 +105,9 @@ const Services = () => {
             <p className="text-blue-100/80 leading-relaxed mb-8">
               Η κλασική αλλά εξελιγμένη μέθοδος για απόλυτη ακρίβεια στις κινήσεις των δοντιών, εξασφαλίζοντας σταθερά και υγιή αποτελέσματα.
             </p>
-            <button className="bg-white text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors">
+            <Link to="/contact" className="bg-white text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition-colors">
               Συζητήστε με την Ιατρό
-            </button>
+            </Link>
           </div>
         </div>
       </div>
