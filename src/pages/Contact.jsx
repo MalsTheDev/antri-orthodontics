@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -8,11 +8,35 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Ευχαριστούμε για το μήνυμά σας! Θα επικοινωνήσουμε μαζί σας σύντομα.');
-    setFormData({ name: '', phone: '', email: '', message: '' });
+    setStatus('loading');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: 'Νέο μήνυμα από την ιστοσελίδα',
+          from_name: formData.name,
+          ...formData
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', phone: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e) => {
@@ -162,12 +186,39 @@ const Contact = () => {
                     placeholder="Πώς μπορούμε να βοηθήσουμε;"
                   ></textarea>
                 </div>
+                {status === 'success' && (
+                  <div className="flex items-center gap-3 p-4 rounded-2xl bg-green-50 border border-green-100 text-green-700">
+                    <CheckCircle className="w-5 h-5 shrink-0" />
+                    <p className="text-sm font-semibold">Το μήνυμά σας στάλθηκε! Θα επικοινωνήσουμε μαζί σας σύντομα.</p>
+                  </div>
+                )}
+
+                {status === 'error' && (
+                  <div className="flex items-center gap-3 p-4 rounded-2xl bg-red-50 border border-red-100 text-red-700">
+                    <AlertCircle className="w-5 h-5 shrink-0" />
+                    <p className="text-sm font-semibold">Κάτι πήγε στραβά. Παρακαλούμε δοκιμάστε ξανά ή καλέστε μας.</p>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full py-5 rounded-2xl bg-blue-600 text-white font-black uppercase tracking-widest shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-1 transition-all flex items-center justify-center gap-3"
+                  disabled={status === 'loading'}
+                  className="w-full py-5 rounded-2xl bg-blue-600 text-white font-black uppercase tracking-widest shadow-lg shadow-blue-200 hover:bg-blue-700 hover:-translate-y-1 transition-all flex items-center justify-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                 >
-                  ΑΠΟΣΤΟΛΗ
-                  <Send className="w-5 h-5" />
+                  {status === 'loading' ? (
+                    <>
+                      <svg className="animate-spin w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                      </svg>
+                      ΑΠΟΣΤΟΛΗ...
+                    </>
+                  ) : (
+                    <>
+                      ΑΠΟΣΤΟΛΗ
+                      <Send className="w-5 h-5" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
