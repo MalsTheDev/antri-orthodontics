@@ -1,5 +1,6 @@
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle, Instagram } from 'lucide-react';
 import { useState } from 'react';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -45,6 +46,44 @@ const Contact = () => {
 
   return (
     <div className="flex flex-col py-12 md:py-24 bg-white section-pattern">
+      <SEO 
+        title="Επικοινωνία & Ραντεβού"
+        description="Επικοινωνήστε με το ορθοδοντικό ιατρείο της Άντρης Κοντοπούλου στη Λαμία ή τη Μακρακώμη. Προγραμματίστε το ραντεβού σας σήμερα."
+        url="/contact"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Κοντοπούλου Άντρη - Ορθοδοντικό Ιατρείο",
+          "image": "https://antri-orthodontics.gr/logo.png",
+          "telePhone": "2231051127",
+          "email": "acontop@gmail.com",
+          "address": [{
+            "@type": "PostalAddress",
+            "streetAddress": "Καποδιστρίου 16",
+            "addressLocality": "Λαμία",
+            "postalCode": "35100",
+            "addressCountry": "GR"
+          }, {
+            "@type": "PostalAddress",
+            "streetAddress": "Πλ. Δημοκρατίας 3",
+            "addressLocality": "Μακρακώμη",
+            "postalCode": "35011",
+            "addressCountry": "GR"
+          }],
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "14:30",
+            "closes": "21:00"
+          }
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-16">
           <h1 className="text-4xl md:text-5xl font-black text-blue-900 mb-6">Επικοινωνήστε <span className="text-blue-500">μαζί μας</span></h1>
@@ -110,6 +149,23 @@ const Contact = () => {
                 <div>
                   <h4 className="font-black text-blue-900 uppercase text-xs tracking-widest mb-1">Email</h4>
                   <a href="mailto:acontop@gmail.com" className="text-blue-600 font-bold hover:underline">acontop@gmail.com</a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-5">
+                <div className="p-4 bg-slate-50 rounded-2xl text-blue-500 shadow-sm">
+                  <Instagram className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-black text-blue-900 uppercase text-xs tracking-widest mb-1">Instagram</h4>
+                  <a 
+                    href="https://www.instagram.com/kontopoulou_orthodontics/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 font-bold hover:underline"
+                  >
+                    @kontopoulou_orthodontics
+                  </a>
                 </div>
               </div>
             </div>

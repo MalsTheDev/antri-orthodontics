@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Home = () => {
   return (
     <div className="flex flex-col">
+      <SEO 
+        title="Ορθοδοντικό Ιατρείο Λαμία - Άντρη Κοντοπούλου"
+        description="Καλώς ήρθατε στο ορθοδοντικό ιατρείο της Άντρης Κοντοπούλου στη Λαμία. Σύγχρονες λύσεις για παιδιά και ενήλικες (Invisalign, σιδεράκια)."
+        keywords="ορθοδοντικός Λαμία, ορθοδοντικό ιατρείο Λαμία, Άντρη Κοντοπούλου, Invisalign Λαμία, σιδεράκια Λαμία"
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white section-pattern pt-12 md:pt-24 pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

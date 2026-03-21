@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antri-orthodontics.gr/sitemap.xml

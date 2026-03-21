@@ -1,4 +1,5 @@
 import { ArrowRightLeft } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const CaseCard = ({ item }) => {
   return (
@@ -86,6 +87,11 @@ const Results = () => {
 
   return (
     <div className="flex flex-col py-12 md:py-24 bg-white section-pattern">
+      <SEO 
+        title="Αποτελέσματα Θεραπειών"
+        description="Δείτε πραγματικά περιστατικά πριν και μετά την ορθοδοντική θεραπεία. Εντυπωσιακές μεταμορφώσεις χαμόγελου στο ιατρείο μας."
+        url="/results"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 space-y-4">
           <h1 className="text-4xl md:text-5xl font-black text-blue-900 tracking-tight">

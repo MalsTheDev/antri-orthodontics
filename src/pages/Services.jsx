@@ -2,6 +2,7 @@
 
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 const Services = () => {
   const serviceList = [
@@ -52,6 +53,12 @@ const Services = () => {
 
   return (
     <div className="flex flex-col py-12 section-pattern">
+      <SEO 
+        title="Υπηρεσίες & Θεραπείες"
+        description="Ολοκληρωμένες ορθοδοντικές υπηρεσίες: Invisalign, γλωσσική ορθοδοντική, σιδεράκια για παιδιά και ενήλικες, ψηφιακή αποτύπωση."
+        url="/services"
+        keywords="Invisalign Λαμία, σιδεράκια, γλωσσική ορθοδοντική, ψηφιακή αποτύπωση, ορθοδοντική παίδων"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl mb-20">
           <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-6">Υπηρεσίες & <span className="text-blue-500">Θεραπείες</span></h1>

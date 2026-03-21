@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -21,9 +21,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start text-gray-600 text-sm">
                 <MapPin className="w-4 h-4 mr-2 text-blue-500 shrink-0 mt-0.5" />
-                <a 
-                  href="https://maps.app.goo.gl/F1nQcjBEJ2NLM6uU7" 
-                  target="_blank" 
+                <a
+                  href="https://maps.app.goo.gl/F1nQcjBEJ2NLM6uU7"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-blue-600"
                 >
@@ -66,6 +66,17 @@ const Footer = () => {
               <li className="flex items-center text-gray-600 text-sm">
                 <Mail className="w-4 h-4 mr-2 text-blue-500" />
                 <a href="mailto:acontop@gmail.com" className="hover:text-blue-600">acontop@gmail.com</a>
+              </li>
+              <li className="flex items-center text-gray-600 text-sm">
+                <Instagram className="w-4 h-4 mr-2 text-blue-500" />
+                <a
+                  href="https://www.instagram.com/kontopoulou_orthodontics/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600"
+                >
+                  @kontopoulou_orthodontics
+                </a>
               </li>
             </ul>
           </div>

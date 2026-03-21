@@ -1,5 +1,6 @@
 import { MapPinned, X } from 'lucide-react';
 import { useState } from 'react';
+import SEO from '../components/SEO';
 
 const Clinic = () => {
   const [lightbox, setLightbox] = useState(null);
@@ -10,6 +11,11 @@ const Clinic = () => {
 
   return (
     <div className="flex flex-col section-pattern">
+      <SEO 
+        title="Το Ιατρείο μας"
+        description="Γνωρίστε την ορθοδοντικό Άντρη Κοντοπούλου και περιηγηθείτε στους σύγχρονους χώρους των ιατρείων μας σε Λαμία και Μακρακώμη."
+        url="/clinic"
+      />
       {/* Doctor Section */}
       <section className="pt-12 md:pt-24 pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
