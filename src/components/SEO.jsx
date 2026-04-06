@@ -12,7 +12,6 @@ const SEO = ({ title, description, keywords, type = 'website', image, url, schem
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description || defaultDescription} />
-      <meta name="google-site-verification" content="Zr9GQ73U-4WEmqrW2IwnfdC5mfrVtKbX_q0XgNluYoQ" />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullUrl} />
 
